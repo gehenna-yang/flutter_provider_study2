@@ -10,4 +10,18 @@ class ShoppingItemModel{
     required this.hasBought,
     required this.isSpicy,
   });
+
+  ShoppingItemModel copyWith({
+    String? name, // 상품명
+    int? quantity, // 수량
+    bool? hasBought, // 구매여부
+    bool? isSpicy, // 매운지
+  }){
+    return ShoppingItemModel(
+      name: name?? this.name,
+      quantity: quantity?? this.quantity,
+      hasBought: hasBought?? this.hasBought,
+      isSpicy: isSpicy?? this.isSpicy,
+    );
+  }
 }
